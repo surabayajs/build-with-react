@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function ItemCard({ judul, jumlah, harga }) {
   return (
     <div style={{ display: "flex", border: "1px solid black" }}>
@@ -15,5 +17,11 @@ function ItemCard({ judul, jumlah, harga }) {
     </div>
   );
 }
+
+ItemCard.propTypes = {
+  judul: PropTypes.string.isRequired,
+  jumlah: PropTypes.number.isRequired,
+  harga: PropTypes.number.isRequired,
+};
 
 export default ItemCard;

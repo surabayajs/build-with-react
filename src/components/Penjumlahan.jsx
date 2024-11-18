@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Penjumlahan() {
+  const refHasil = useRef();
   const [hasil, setHasil] = useState(0);
   const [angka1, setAngka1] = useState(0);
   const [angka2, setAngka2] = useState(0);
+
   const add = () => {
     const r = parseInt(angka1) + parseInt(angka2);
+    refHasil.current.value = r;
     setHasil(r);
 
     if (r > 10) {
@@ -14,6 +17,7 @@ export default function Penjumlahan() {
       alert("< 10");
     }
   };
+
   return (
     <div>
       <input
@@ -28,7 +32,12 @@ export default function Penjumlahan() {
       />
       <button onClick={add}>Jumlah</button>
       <p>Hasil = {hasil}</p>
-      <p>Hasil = {parseInt(angka1) + parseInt(angka2)}</p>
+      <p>
+        Hasil ={" "}
+        {parseInt(angka1 || 0) +
+          parseInt(angka2 || 0)}
+      </p>
+      <p>Hasil Ref = {refHasil.current}</p>
     </div>
   );
 }

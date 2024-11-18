@@ -1,39 +1,46 @@
 import ItemCard from "./ItemCard";
+import { useState } from "react";
 
 export default function ListCard() {
-  let judul = "Lagi trending, nih";
-  let produk2 = [
+  const [produk, setProduk] = useState([
     {
-      judul: "PS4",
-      jumlah: 30,
-      harga: 50000,
-      gambar: "",
-    },
-    {
-      judul: "RTX 5000",
+      judul: "Xiami",
       jumlah: 10,
-      harga: 95000,
+      harga: 100000,
     },
-    {
-      judul: "iPhone 16",
-      jumlah: 9,
-      harga: 72000,
-    },
-    {
-      judul: "Macbook",
-      jumlah: 96,
-      harga: 330000,
-    },
-  ];
+  ]);
+  let judul = "Lagi trending, nih";
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const newProduk = {
+      judul: e.target.judul.value,
+      jumlah: e.target.jumlah.value,
+      harga: e.target.harga.value,
+    };
+
+    // const newProdukList = produk.concat(newProduk);
+    // setProduk(newProdukList);
+    // setProduk([...produk, newProduk]);
+
+    setProduk((prev) => [...prev, newProduk]);
+  };
+
   return (
     <div>
       <div>
+        <form onSubmit={onSubmit}>
+          <input type="text" name="judul" placeholder="judul" />
+          <input type="number" name="jumlah" placeholder="jumlah" />
+          <input type="number" name="harga" placeholder="harga" />
+          <button type="submit">tambah</button>
+        </form>
         <div>
           <h2>{judul}</h2>
         </div>
 
         <div style={{ display: "flex" }}>
-          {produk2.map((p) => {
+          {produk.map((p) => {
             return (
               <ItemCard
                 key={p.judul}
