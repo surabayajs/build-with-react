@@ -1,8 +1,9 @@
-import ExampleDaisyui from "./components/ExampleDaisyui";
+import GetApiData from "./components/GetApiData";
+
 function App() {
   return (
     <>
-      <ExampleDaisyui />
+      <GetApiData />
     </>
   );
 }
