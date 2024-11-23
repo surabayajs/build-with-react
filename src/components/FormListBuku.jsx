@@ -33,7 +33,7 @@ function FormListBuku() {
               }}
             >
               <p>{buku}</p>
-              <button onClick={() => deleteBuku(index)}>x</button>
+              <button onClick={() => deleteBuku(index)}>x {index}</button>
             </div>
           );
         })}

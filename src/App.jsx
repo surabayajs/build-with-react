@@ -1,10 +1,8 @@
-import Penjumlahan from "./components/Penjumlahan";
-import "./styles/App.css";
-
+import ExampleDaisyui from "./components/ExampleDaisyui";
 function App() {
   return (
     <>
-      <Penjumlahan />
+      <ExampleDaisyui />
     </>
   );
 }
