@@ -21,8 +21,8 @@ const GetApiData = () => {
     setIsLoading(false);
   };
 
-  const getDetailPeople = async (id) => {
-    const data = await fetch(`https://swapi.dev/api/people/${id}`);
+  const getDetailPeople = async (url) => {
+    const data = await fetch(url);
     const result = await data.json(); // Object
     setDetail(result);
   };
@@ -91,7 +91,7 @@ const GetApiData = () => {
                       <td>
                         <button
                           className="text-left"
-                          onClick={() => getDetailPeople(index + 1)}
+                          onClick={() => getDetailPeople(row.url)}
                         >
                           {row.name}
                         </button>
