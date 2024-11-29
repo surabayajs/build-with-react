@@ -9,5 +9,5 @@ Currently, two official plugins are available:
 
 ## LIST PESERTA - 29 November 2024
 
-- Nusendra
-- Adit
+- Nusendra Hanggarawan
+- Aditia Falacha
