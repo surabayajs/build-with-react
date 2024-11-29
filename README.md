@@ -11,5 +11,6 @@ Currently, two official plugins are available:
 
 - Nusendra
 - Adit
+- ari
 -Fransdito
 - Maulana Zidan
