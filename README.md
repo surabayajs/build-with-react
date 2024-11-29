@@ -16,3 +16,4 @@ Currently, two official plugins are available:
 - ari
 -Fransdito
 - Maulana Zidan
+- Ferdy
