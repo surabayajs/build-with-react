@@ -2,6 +2,7 @@ const links = [
   { id: 1, label: "SurabayaJS", url: "https://surabayajs.org" },
   { id: 2, label: "LinkedIn", url: "https://linkedin.com" },
   { id: 3, label: "Portfolio", url: "https://example.com" },
+  { id: 4, label: "Blog", url: "https://nusendra.com" },
 ];
 
 const LinkTree = () => {
