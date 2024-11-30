@@ -20,6 +20,7 @@ export default function Penjumlahan() {
 
   return (
     <div>
+      <div>TEST</div>
       <input
         placeholder="masukan angka ke 1"
         value={angka1}
@@ -32,11 +33,7 @@ export default function Penjumlahan() {
       />
       <button onClick={add}>Jumlah</button>
       <p>Hasil = {hasil}</p>
-      <p>
-        Hasil ={" "}
-        {parseInt(angka1 || 0) +
-          parseInt(angka2 || 0)}
-      </p>
+      <p>Hasil = {parseInt(angka1 || 0) + parseInt(angka2 || 0)}</p>
       <p>Hasil Ref = {refHasil.current}</p>
     </div>
   );
